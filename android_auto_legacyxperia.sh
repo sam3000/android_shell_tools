@@ -5,11 +5,8 @@ FullTimeStart=$(date +%s);
 BuildMode="$1";
 
 # Android Selection
-if [[ "$BuildMode" =~ "cm-11.0" ]]; then
-  BuildBranch="cm-11.0";
-  function android_selection() { source ./android_choose_rom.sh 9 n n; }
-elif [[ "$BuildMode" =~ "cm-12.1" ]]; then
-  BuildBranch="cm-12.1";
+if [[ "$BuildMode" =~ "cm-14.0" ]]; then
+  BuildBranch="cm-14.0";
   function android_selection() { source ./android_choose_rom.sh 8 n n; }
 else
   BuildBranch="cm-13.0";
